@@ -9,8 +9,12 @@ canvas.height = height;
 
 // begin hier met jouw code voor deze opdracht
 
-let myCircle = new Point(500,200,50,"yellow");
-myCircle.draw();
+let myPoint = new Point(200,300,30,"red",true);
 
-let myOtherCircle = new Point(200,100,100,"blue")
-myOtherCircle.draw()
+
+function animate(){
+  context.clearRect(0,0,width,height)
+  myPoint.draw(context)
+}
+
+setInterval(animate,10);
